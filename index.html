@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Task</title>
+</head>
+<body>
+    <h1>STUDENT FORM</h1>
+    <table border="1" cellpadding="2" cellspacing="5">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="student_name" id="student_name"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="student_age" id="student_age"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="student_gender" value="Male">Male
+                <input type="radio" name="student_gender" value="Female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select style="width: 100%;" id="student_course">
+                    <option value="">Select Course</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="ES6">ES6</option>
+                    <option value="React JS">React JS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="student_email" id="student_email"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" id="btn" style="background-color: aqua;width: 100%;">Save</button></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table id="listTable" border="1" cellpadding="2" cellspacing="5">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>COURSE</th>
+                <th>GENDER</th>
+                <th>EMAIL</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody id="tbl_body">
+
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

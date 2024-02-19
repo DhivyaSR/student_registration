@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="course" value="C++">C++
+    <input type="checkbox" name="course" value="Java">Java
+    <input type="checkbox" name="course" value="JS">JS
+    <input type="checkbox" name="course" value="React JS">React JS
+
+    <script>
+        var course = document.getElementsByName('course');
+        var course_list = []
+        console.log(course);
+        for(count=0;count<course.length;count++){
+            course[count].addEventListener('click',function(){
+                if(event.target.checked){
+                    course_list.push(event.target.value);
+                    console.log(course_list);
+                }else{
+                    var index = course_list.indexOf(event.target.value);
+                    course_list.splice(index,1);
+                    console.log(course_list);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
